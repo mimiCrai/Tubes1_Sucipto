@@ -1,0 +1,10 @@
+{
+  "name": "TRIPIN",
+  "version": "1.0",
+  "authors": ["I13523031, 13523054"],
+  "description": "Making a triangle and spins at each node",
+  "homepage": "",
+  "countryCodes": ["id"],
+  "platform": ".Net 6.0",
+  "programmingLang": "C# 10.0"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "suniper2",
+  "version": "1.0",
+  "authors": ["13523054, 13523031"],
+  "description": "A bot that focuses on hitting the bullet",
+  "homepage": "",
+  "countryCodes": ["id"],
+  "platform": ".Net 6.0",
+  "programmingLang": "C# 10.0"
+}
