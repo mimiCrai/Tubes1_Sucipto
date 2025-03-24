@@ -6,7 +6,7 @@ using Robocode.TankRoyale.BotApi.Events;
 public class CircleImpact : Bot
 {   
     bool followingEnemy, startingCircle, goingClockwise;
-    int turnToShoot, firstHundredTurns, bouncingBackTurn
+    int turnToShoot, firstHundredTurns, bouncingBackTurn;
     double centerX, centerY;
     
     static void Main(string[] args)
@@ -30,7 +30,7 @@ public class CircleImpact : Bot
         
         double radius = 150;
         centerX = ArenaWidth / 2; centerY = ArenaHeight / 2;
-        turnToShoot = 20, firstHundredTurns = 200; bouncingBackTurn = 0;
+        turnToShoot = 20; firstHundredTurns = 200; bouncingBackTurn = 0;
         followingEnemy = false; startingCircle = true; goingClockwise = true;
 
         while (IsRunning)

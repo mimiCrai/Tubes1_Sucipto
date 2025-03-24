@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Jm/mqpXK9REElqgjDeLhA2zG3WnioVkaN1IDdJU3ojhPEWCNEasxfSmvBKmHLmZUHebVcVnJ22+T1Ci7MKDJCA==",
+  "dgSpecHash": "6ewImCSF8sQ1huxuQbOW5FC7nn6HmRXBsStxzuGWT02OfH8Y2IOUE5L2cqoZAWyKdQRdotFH0F2QJSKlBND27g==",
   "success": true,
-  "projectFilePath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\CircleImpact\\CircleImpact.csproj",
+  "projectFilePath": "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\alternativebots\\circleimpact\\CircleImpact.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.build.locator\\1.7.8\\microsoft.build.locator.1.7.8.nupkg.sha512",
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",

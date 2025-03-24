@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\CircleImpact\\CircleImpact.csproj": {}
+    "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\alternativebots\\circleimpact\\CircleImpact.csproj": {}
   },
   "projects": {
-    "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\CircleImpact\\CircleImpact.csproj": {
+    "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\alternativebots\\circleimpact\\CircleImpact.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\CircleImpact\\CircleImpact.csproj",
+        "projectUniqueName": "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\alternativebots\\circleimpact\\CircleImpact.csproj",
         "projectName": "CircleImpact",
-        "projectPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\CircleImpact\\CircleImpact.csproj",
+        "projectPath": "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\alternativebots\\circleimpact\\CircleImpact.csproj",
         "packagesPath": "C:\\Users\\WINDOWS 11\\.nuget\\packages\\",
-        "outputPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\CircleImpact\\obj\\",
+        "outputPath": "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\alternativebots\\circleimpact\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\WINDOWS 11\\AppData\\Roaming\\NuGet\\NuGet.Config"

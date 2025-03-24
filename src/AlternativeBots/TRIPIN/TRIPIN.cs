@@ -17,7 +17,13 @@ public class TRIPIN : Bot
 
     public override void Run()
     {
-        BodyColor = Color.Gray;
+        BodyColor = Color.FromArgb(0x07, 0x8D, 0x70);   // dark green
+        TurretColor = Color.FromArgb(0x26, 0xCE, 0xAA); // green
+        RadarColor = Color.FromArgb(0x98, 0xE8, 0xC1);  // light green
+        BulletColor = Color.FromArgb(0xFF, 0xFF, 0xFF); // white
+        ScanColor = Color.FromArgb(0x7B, 0xAD, 0xE2);   // light blue
+        TracksColor = Color.FromArgb(0x50, 0x49, 0xCC); // indigo
+        GunColor = Color.FromArgb(0x3D, 0x1A, 0x78);    // blue
         while (IsRunning)
         {
 
