@@ -36,6 +36,14 @@ public class NearWall : Bot
         double dist;
         while (IsRunning)
         {
+            if(clockwise)
+            {
+                Console.WriteLine("Rotating clockwise");
+            }
+            else
+            {
+                Console.WriteLine("Rotating counter-clockwise");
+            }
 
             // Logika untuk menentukan arah dan pergerakan bot berdasarkan posisi di arena
             if (Y < ArenaHeight / 2)//bawah
@@ -174,7 +182,7 @@ public class NearWall : Bot
                         else
                         {
                             SetShoot = false;
-                            
+
                             Forward(DistanceTo(ArenaWidth - nearWallDistance, ArenaHeight - nearWallDistance));
                         }
                     }
@@ -236,6 +244,12 @@ public class NearWall : Bot
     public override void OnHitBot(HitBotEvent e)
     {
         // Mengubah arah rotasi
-        clockwise = !clockwise;
+        Console.WriteLine("Changing direction!");
+        if(clockwise){
+            clockwise = false;
+        }
+        else{
+            clockwise = true;
+        }
     }
 }

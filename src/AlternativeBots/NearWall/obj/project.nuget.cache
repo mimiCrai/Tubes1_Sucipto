@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PMJPQ2FmsYPNDgbv3dLWbSTO/m4pldJ2AofneiZ2ASi91OMZZ0PYmvOGiZTOoArIVliEMNnRD8fqpzjuI6ENmQ==",
+  "dgSpecHash": "JmizBxlI3w0cygU+qzlVtXfXfCdpZWES3ujZ+aK2xmdF/aIr+zaWTJkk5Bmzi51P522UN5/0/6yXZ52i5SYUWQ==",
   "success": true,
-  "projectFilePath": "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\alternativebots\\nearwall\\NearWall.csproj",
+  "projectFilePath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\NearWall\\NearWall.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.build.locator\\1.7.8\\microsoft.build.locator.1.7.8.nupkg.sha512",
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
