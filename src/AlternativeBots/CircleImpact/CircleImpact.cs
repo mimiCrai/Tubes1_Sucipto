@@ -28,9 +28,21 @@ public class CircleImpact : Bot
         TracksColor = Color.FromArgb(0x50, 0x49, 0xCC); // indigo
         GunColor = Color.FromArgb(0x3D, 0x1A, 0x78);    // blue
         
-        double radius = 150;
+        // set mode pacifist:
+        // jika musuh < 5, mode pacifist selesai setelah 200 turn dilalui;
+        // jika musuh >= 5, mode pacifist selesai setelah musuh tinggal tersisa 5.
+        if (EnemyCount < 5) 
+        {
+            firstHundredTurns = 200;
+        }
+        else
+        {
+            firstHundredTurns = -1;
+        }
+
+        double radius = 200;
         centerX = ArenaWidth / 2; centerY = ArenaHeight / 2;
-        turnToShoot = 20; firstHundredTurns = 200; bouncingBackTurn = 0;
+        turnToShoot = 20; bouncingBackTurn = 0;
         followingEnemy = false; startingCircle = true; goingClockwise = true;
 
         while (IsRunning)
@@ -99,8 +111,8 @@ public class CircleImpact : Bot
                 else
                 {
 
-                    // lakukan penyerangan jika 200 turns pertama telah dilewati
-                    if (firstHundredTurns <= 0)
+                    // lakukan penyerangan jika mode pacifist telah selesai
+                    if (EnemyCount < 5 && firstHundredTurns <= 0)
                     {
                         Console.WriteLine("nilai turnToShoot: " + turnToShoot);
                         SetTurnLeft(60);
@@ -117,8 +129,8 @@ public class CircleImpact : Bot
                     }
                 }
                 
-                // lakukan scanning musuh setelah 200 turns pertama telah dilewati
-                if (firstHundredTurns <= 0)
+                // lakukan scanning musuh setelah mode pacifist telah selesai
+                if (EnemyCount < 5 && firstHundredTurns <= 0)
                 { 
                     SetTurnRadarLeft(60);
                 }
@@ -148,8 +160,8 @@ public class CircleImpact : Bot
             else
             {
 
-                // musuh tidak diikuti jika 200 turns pertama belum dilewati
-                if (firstHundredTurns <= 0)
+                // musuh tidak diikuti jika mode pacifist belum selesai
+                if (EnemyCount < 5 && firstHundredTurns <= 0)
                 {
                     ClearEvents();
                     followingEnemy = true;
