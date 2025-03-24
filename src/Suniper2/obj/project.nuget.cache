@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y3YFKQwjbrcQ66XL1rzy0PUquHCsb8sqpqerzPAc004TTK+Z2JCOw/2xmcI+pPeuoNk9INk7GbQHm2M073M7og==",
+  "dgSpecHash": "ME/j9Z5QhAImHlhpbOfi6Lk07hvvncsdmy76qS8bcavFeZRuDSIXXJvCzrJJDzBFw153w2qMUgNPuN+i4oqXiQ==",
   "success": true,
-  "projectFilePath": "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\sniper2\\Sniper2.csproj",
+  "projectFilePath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\Suniper2\\Suniper2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.build.locator\\1.7.8\\microsoft.build.locator.1.7.8.nupkg.sha512",
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",

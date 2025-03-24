@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aZ1urYGz47Oy0nFpOVTPYKNEzZ4WybWNJ3/Zcn9wIhANrVL/8ZmDpWHN00m4YMq1MxfYoN+05YBRci3Kwzw4tA==",
+  "dgSpecHash": "6fqAB5+VyILrb8ZYO68k2Qx+1MDQHbuE9t6CSu0NxN8o6gALGShexZg2xftJg8szS45jDQ1sqzU0A2MgiNwchA==",
   "success": true,
-  "projectFilePath": "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\alternativebots\\tripin\\TRIPIN.csproj",
+  "projectFilePath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\TRIPIN\\TRIPIN.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.build.locator\\1.7.8\\microsoft.build.locator.1.7.8.nupkg.sha512",
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",

@@ -3,7 +3,7 @@ using System.Drawing;
 using Robocode.TankRoyale.BotApi;
 using Robocode.TankRoyale.BotApi.Events;
 
-public class Sniper2 : Bot
+public class Suniper2 : Bot
 {   
     private const int MODI = (1<<23); //untuk warna (UNUSED)
     private bool runWall = false; // untuk status kena dinding
@@ -17,10 +17,10 @@ public class Sniper2 : Bot
 
     static void Main(string[] args)
     {
-        new Sniper2().Start();
+        new Suniper2().Start();
     }
 
-    Sniper2() : base(BotInfo.FromFile("Sniper2.json")) { }
+    Suniper2() : base(BotInfo.FromFile("Suniper2.json")) { }
 
     
     public override void Run()
