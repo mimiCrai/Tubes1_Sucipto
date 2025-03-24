@@ -5,7 +5,6 @@ using Robocode.TankRoyale.BotApi.Events;
 
 public class NearWall : Bot
 {
-    private bool SetShoot = false; // Flag untuk menentukan apakah bot harus menembak atau tidak
     private bool clockwise = true; // Flag untuk menentukan arah rotasi (searah jarum jam atau tidak)
     private int nearWallDistance = 50; // Jarak minimum dari dinding
     // private bool loc[4];
@@ -33,7 +32,6 @@ public class NearWall : Bot
         AdjustRadarForGunTurn = true;
         double bear; // Variabel untuk menyimpan sudut bearing
         clockwise = true; // Inisialisasi arah rotasi
-        double dist;
         while (IsRunning)
         {
             if(clockwise)
@@ -62,13 +60,13 @@ public class NearWall : Bot
                             SetTurnLeft(bear);
                             SetTurnGunLeft(GunBearingTo(X, Y+400));
                             SetTurnRadarLeft(RadarBearingTo(X, Y+400));
-                            SetShoot = true;
+                            
                             Go();
                             ClearEvents();
                         }
                         else
                         {
-                            SetShoot = false;
+                            
                             Forward(DistanceTo(ArenaWidth - nearWallDistance, nearWallDistance));
                         }
                     }
@@ -82,13 +80,13 @@ public class NearWall : Bot
                             SetTurnLeft(bear);
                             SetTurnGunLeft(GunBearingTo(X+400, Y));
                             SetTurnRadarLeft(RadarBearingTo(X+400, Y));
-                            SetShoot = true;
+                            
                             Go();
                             ClearEvents();
                         }
                         else
                         {
-                            SetShoot = false;
+                            
                             Forward(DistanceTo(nearWallDistance, ArenaHeight - nearWallDistance));
                         }
                     }
@@ -106,13 +104,13 @@ public class NearWall : Bot
                             SetTurnLeft(bear);
                             SetTurnGunLeft(GunBearingTo(X-400, Y));
                             SetTurnRadarLeft(RadarBearingTo(X-400, Y));
-                            SetShoot = true;
+                            
                             Go();
                             ClearEvents();
                         }
                         else
                         {
-                            SetShoot = false;
+                            
                             
                             Forward(DistanceTo(ArenaWidth - nearWallDistance, ArenaHeight - nearWallDistance));
                         }
@@ -127,13 +125,13 @@ public class NearWall : Bot
                             SetTurnLeft(bear);
                             SetTurnGunLeft(GunBearingTo(X, Y+400));
                             SetTurnRadarLeft(RadarBearingTo(X, Y+400));
-                            SetShoot = true;
+                            
                             Go();
                             ClearEvents();
                         }
                         else
                         {
-                            SetShoot = false;
+                            
                             Forward(DistanceTo(nearWallDistance, nearWallDistance));
                         }
                     }
@@ -154,13 +152,13 @@ public class NearWall : Bot
                             SetTurnLeft(bear);
                             SetTurnGunLeft(GunBearingTo(X+400, Y));
                             SetTurnRadarLeft(RadarBearingTo(X+400, Y));
-                            SetShoot = true;
+                            
                             Go();
                             ClearEvents();
                         }
                         else
                         {
-                            SetShoot = false;
+                            
                             Forward(DistanceTo(nearWallDistance, nearWallDistance));
                         }
                     }
@@ -175,13 +173,13 @@ public class NearWall : Bot
                             SetTurnLeft(bear);
                             SetTurnGunLeft(GunBearingTo(X, Y-400));
                             SetTurnRadarLeft(RadarBearingTo(X, Y-400));
-                            SetShoot = true;
+                            
                             Go();
                             ClearEvents();
                         }
                         else
                         {
-                            SetShoot = false;
+                            
 
                             Forward(DistanceTo(ArenaWidth - nearWallDistance, ArenaHeight - nearWallDistance));
                         }
@@ -200,13 +198,13 @@ public class NearWall : Bot
                             SetTurnLeft(bear);
                             SetTurnGunLeft(GunBearingTo(X, Y-400));
                             SetTurnRadarLeft(RadarBearingTo(X, Y-400));
-                            SetShoot = true;
+                            
                             Go();
                             ClearEvents();
                         }
                         else
                         {
-                            SetShoot = false;
+                            
                             Forward(DistanceTo(nearWallDistance, ArenaHeight - nearWallDistance));
                             
                         }
@@ -221,13 +219,13 @@ public class NearWall : Bot
                             SetTurnLeft(bear);
                             SetTurnGunLeft(GunBearingTo(X-400, Y));
                             SetTurnRadarLeft(RadarBearingTo(X-400, Y));
-                            SetShoot = true;
+                            
                             Go();
                             ClearEvents();
                         }
                         else
                         {
-                            SetShoot = false;
+                            
                             Forward(DistanceTo(ArenaWidth - nearWallDistance, nearWallDistance));
                         }
                     }

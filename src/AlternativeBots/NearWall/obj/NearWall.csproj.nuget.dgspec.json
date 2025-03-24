@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\NearWall\\NearWall.csproj": {}
+    "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\alternativebots\\nearwall\\NearWall.csproj": {}
   },
   "projects": {
-    "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\NearWall\\NearWall.csproj": {
+    "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\alternativebots\\nearwall\\NearWall.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\NearWall\\NearWall.csproj",
+        "projectUniqueName": "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\alternativebots\\nearwall\\NearWall.csproj",
         "projectName": "NearWall",
-        "projectPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\NearWall\\NearWall.csproj",
+        "projectPath": "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\alternativebots\\nearwall\\NearWall.csproj",
         "packagesPath": "C:\\Users\\WINDOWS 11\\.nuget\\packages\\",
-        "outputPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\NearWall\\obj\\",
+        "outputPath": "C:\\CODING\\TUBES\\tubes1_sucipto\\src\\alternativebots\\nearwall\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\WINDOWS 11\\AppData\\Roaming\\NuGet\\NuGet.Config"
