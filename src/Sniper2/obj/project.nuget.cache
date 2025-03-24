@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "afoe3GTxczv+xR1YcfFOb68wFdkLPxEt07rlXhXog1/eOe9OMv7JUcdLUs35VF+U2kytgjTz38XRVWHvfq8/SA==",
+  "dgSpecHash": "eCb4R6AL67kNOXT6RkEtrAIqmf5EqZQauwd8ijeD69GQdNFRmqfQbzFiXPvLQEf+F/QyGI38sefFZXrssVpdjg==",
   "success": true,
-  "projectFilePath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\Sniper2\\Sniper2.csproj",
+  "projectFilePath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\Sniper2\\Sniper2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.build.locator\\1.7.8\\microsoft.build.locator.1.7.8.nupkg.sha512",
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",

@@ -5,10 +5,12 @@ using Robocode.TankRoyale.BotApi.Events;
 
 public class Sniper2 : Bot
 {   
+    private const int MODI = (1<<23);
     private bool runWall = false;
     private int maju = 0;
     private bool shoot = false;
     private bool startCheck = false;
+    private int ColorChoice = 0;
     private ScannedBotEvent en;
     private ScannedBotEvent enSHOOT;
     private double minX, minY, minDist = double.PositiveInfinity;
@@ -41,6 +43,7 @@ public class Sniper2 : Bot
         minDist = DistanceTo(minX,minY);
         while (IsRunning)
         {
+            IntToRGB();
             if(startCheck){
                 double dist = DistanceTo(en.X, en.Y);
                 if(dist < minDist || EnemyCount == 1){
@@ -54,26 +57,27 @@ public class Sniper2 : Bot
             }
             SetTurnRadarRight(double.PositiveInfinity);
             minDist = DistanceTo(minX,minY);
-            if(minDist < 250) // dikejarr
+            if(minDist < 200) // dikejarr
             {
+                Console.WriteLine("Threat at: " + minX + ", " + minY);
                 SetTurnLeft(BearingTo(minX,minY));
-                SetBack(100);
+                SetBack(90);
                 if(nearWall()){
                     double choice = -90;
-                    if(Y < 100){
+                    if(Y < 150){
                         if(BearingTo(X,0) > 0){
                             choice = 90;
                         }
-                    }else if(Y > ArenaHeight - 100){
+                    }else if(Y > ArenaHeight - 150){
                         if(BearingTo(X,ArenaHeight) > 0){
                             choice = 90;
                         }
                     }
-                    if(X < 100){
+                    if(X < 150){
                         if(BearingTo(0,Y) > 0){
                             choice = 90;
                         }
-                    }else if(X > ArenaWidth - 100){
+                    }else if(X > ArenaWidth - 150){
                         if(BearingTo(ArenaWidth,Y) > 0){
                             choice = 90;
                         }
@@ -85,48 +89,59 @@ public class Sniper2 : Bot
                     }
                     SetBack(60);
                 }
+                Console.WriteLine("Running away, rotation: " + TurnRemaining);
             }else{
-                SetStop();
                 maju++;
                 if(Math.Abs(maju)>=75){
                     SetForward(0);
                 }else if(maju>=50){
-                    SetForward(80);
-                    if(nearWall()){
-                        stabilize();
-                    }
+                    SetForward(70);
                 }else if(maju>=25){
                     SetBack(0);
                 }else{
-                    SetBack(80);
-                    if(nearWall()){
-                        stabilize();
-                    }
+                    SetBack(70);
                 }
                 if(maju==100){maju*=0;}
-                SetTurnLeft(BearingTo(minX,minY) + 90);
+                SetTurnLeft(BearingTo(minX,minY) - 90);
             }
             if(runWall){
                 stabilize();
             }
             Go();
         }
+    }    private void IntToRGB()
+    {
+        if(ColorChoice%2==0){
+            ColorChoice+=127;
+        }else{
+            ColorChoice+=8193;
+        }
+        ColorChoice%=MODI;
+        int r = (ColorChoice >> 16) & 0xFF;
+        int g = (ColorChoice >> 8) & 0xFF;
+        int b = ColorChoice & 0xFF;
+        BodyColor = Color.FromArgb(r, g, b);
+        TurretColor = Color.FromArgb(r, g, b);
+        RadarColor = Color.FromArgb(r, g, b);
+        BulletColor = Color.FromArgb(r, g, b);
+        ScanColor = Color.FromArgb(r, g, b);
+        TracksColor = Color.FromArgb(r, g, b);
+        GunColor = Color.FromArgb(r, g, b);
     }
-
     private void stabilize(){
         Console.WriteLine("Stabilizing...");
         double newX2 = X;
-        if(X < 100){
-            newX2 = 100;
-        }else if(X > ArenaWidth - 100){
-            newX2 = ArenaWidth - 100;
+        if(X < 200){
+            newX2 = 200;
+        }else if(X > ArenaWidth - 200){
+            newX2 = ArenaWidth - 200;
         }
 
         double newY2 = Y;
-        if(Y < 100){
-            newY2 = 100;
-        }else if(Y > ArenaHeight - 100){
-            newY2 = ArenaHeight - 100;
+        if(Y < 200){
+            newY2 = 200;
+        }else if(Y > ArenaHeight - 200){
+            newY2 = ArenaHeight - 200;
         }
         double angleRun = BearingTo(newX2,newY2);
         while(angleRun > 180){
@@ -138,7 +153,7 @@ public class Sniper2 : Bot
         SetTurnLeft(angleRun);
         SetForward(100);
         MaxSpeed = 10;
-        if(X>=100 && X<=ArenaWidth-100 && Y>=100 && Y<=ArenaHeight-100){
+        if(X>=200 && X<=ArenaWidth-200 && Y>=200 && Y<=ArenaHeight-200){
             Console.WriteLine("Safe!");
             runWall = false;
             MaxSpeed = 100;
@@ -188,7 +203,8 @@ public class Sniper2 : Bot
                 }
             }
             double newX = enSHOOT.X, newY = enSHOOT.Y, time, gunAngle;
-            time = DistanceTo(enSHOOT.X, enSHOOT.Y) / CalcBulletSpeed(firePow);
+            // time = DistanceTo(enSHOOT.X, enSHOOT.Y) / CalcBulletSpeed(firePow);
+            time = DistanceTo(enSHOOT.X, enSHOOT.Y) / (20 - 3 * firePow);
             newX = enSHOOT.X + enSHOOT.Speed * time * Math.Cos(ToRadians(enSHOOT.Direction));
             newY = enSHOOT.Y + enSHOOT.Speed * time * Math.Sin(ToRadians(enSHOOT.Direction));
             gunAngle = GunBearingTo(newX,newY);

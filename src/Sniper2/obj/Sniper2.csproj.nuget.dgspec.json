@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\Sniper2\\Sniper2.csproj": {}
+    "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\Sniper2\\Sniper2.csproj": {}
   },
   "projects": {
-    "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\Sniper2\\Sniper2.csproj": {
+    "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\Sniper2\\Sniper2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\Sniper2\\Sniper2.csproj",
+        "projectUniqueName": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\Sniper2\\Sniper2.csproj",
         "projectName": "Sniper2",
-        "projectPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\Sniper2\\Sniper2.csproj",
+        "projectPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\Sniper2\\Sniper2.csproj",
         "packagesPath": "C:\\Users\\WINDOWS 11\\.nuget\\packages\\",
-        "outputPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\Sniper2\\obj\\",
+        "outputPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\Sniper2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\WINDOWS 11\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -931,11 +931,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\Stalker\\Stalker.csproj",
+      "projectUniqueName": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\Stalker\\Stalker.csproj",
       "projectName": "Stalker",
-      "projectPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\Stalker\\Stalker.csproj",
+      "projectPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\Stalker\\Stalker.csproj",
       "packagesPath": "C:\\Users\\WINDOWS 11\\.nuget\\packages\\",
-      "outputPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\Stalker\\obj\\",
+      "outputPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\Stalker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\WINDOWS 11\\AppData\\Roaming\\NuGet\\NuGet.Config"

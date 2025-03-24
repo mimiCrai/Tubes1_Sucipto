@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ii9Ks02Zi793DSfZrRIi+4f+hDOR8mrQU3RHZlRVYCNcHXKY6qG0KBEVh0IdQG6Awr0LwZhO6JrL58AQsxT8KQ==",
+  "dgSpecHash": "VmeYe5V0Wbi2xOc4Xixd/9qpuZD/hnPyhAnxIwILUNZl2z+RQqcD75RZ7ACi8kOYj5v5GMLIzR4iiwf1NfV5Gg==",
   "success": true,
-  "projectFilePath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\Stalker\\Stalker.csproj",
+  "projectFilePath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\Stalker\\Stalker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.build.locator\\1.7.8\\microsoft.build.locator.1.7.8.nupkg.sha512",
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",

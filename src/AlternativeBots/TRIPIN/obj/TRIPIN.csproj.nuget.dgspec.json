@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\TRIPIN\\TRIPIN.csproj": {}
+    "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\TRIPIN\\TRIPIN.csproj": {}
   },
   "projects": {
-    "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\TRIPIN\\TRIPIN.csproj": {
+    "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\TRIPIN\\TRIPIN.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\TRIPIN\\TRIPIN.csproj",
+        "projectUniqueName": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\TRIPIN\\TRIPIN.csproj",
         "projectName": "TRIPIN",
-        "projectPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\TRIPIN\\TRIPIN.csproj",
+        "projectPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\TRIPIN\\TRIPIN.csproj",
         "packagesPath": "C:\\Users\\WINDOWS 11\\.nuget\\packages\\",
-        "outputPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\RobotSucipto\\TRIPIN\\obj\\",
+        "outputPath": "C:\\CODING\\TUBES\\Tubes1_Sucipto\\src\\AlternativeBots\\TRIPIN\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\WINDOWS 11\\AppData\\Roaming\\NuGet\\NuGet.Config"

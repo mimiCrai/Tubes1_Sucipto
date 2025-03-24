@@ -210,12 +210,12 @@ public class Stalker : Bot
     public override void OnHitBot(HitBotEvent botHitBotEvent)
     {
 
-        double centerX = ArenaWidth / 2; double centerY = ArenaHeight / 2;
+        // double centerX = ArenaWidth / 2; double centerY = ArenaHeight / 2;
 
-        ClearEvents();
-        SetTurnRadarRight(BearingTo(centerX, centerY));
-        TurnRight(BearingTo(centerX, centerY));
-        Forward(100);
+        // ClearEvents();
+        // SetTurnRadarRight(BearingTo(centerX, centerY));
+        // TurnRight(BearingTo(centerX, centerY));
+        // Forward(100);
     }
 
     // jika bot menabrak dinding, segera melakukan pergerakan ke tengah arena

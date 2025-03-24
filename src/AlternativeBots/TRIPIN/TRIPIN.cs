@@ -8,7 +8,7 @@ public class TRIPIN : Bot
     /* A bot that drives forward and backward, and fires a bullet */
     private int county = 0;
     private int bounty = 1;
-    private bool RESETTING = true;
+    private bool RESETTINcG = true;
     static void Main(string[] args)
     {
         new TRIPIN().Start();
