@@ -1,0 +1,10 @@
+{
+  "name": "sucipto",
+  "version": "1.0",
+  "authors": ["13523031, 13523054"],
+  "description": "A bot that uses circular movement as the basis for greedy algorithm.",
+  "homepage": "",
+  "countryCodes": ["id"],
+  "platform": ".Net 6.0",
+  "programmingLang": "C# 10.0"
+}
