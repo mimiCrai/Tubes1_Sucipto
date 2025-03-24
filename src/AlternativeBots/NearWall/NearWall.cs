@@ -4,9 +4,11 @@ using Robocode.TankRoyale.BotApi;
 using Robocode.TankRoyale.BotApi.Events;
 
 public class NearWall : Bot
-{   private bool turnGun = false;
-    private bool clockwise = true;
-    private int nearWallDistance = 50;
+{
+    private bool turnGun = false; // Flag untuk menentukan apakah turret harus berputar
+    private bool clockwise = true; // Flag untuk menentukan arah rotasi (searah jarum jam atau tidak)
+    private int nearWallDistance = 50; // Jarak minimum dari dinding
+
     static void Main(string[] args)
     {
         new NearWall().Start();
@@ -14,10 +16,10 @@ public class NearWall : Bot
 
     NearWall() : base(BotInfo.FromFile("NearWall.json")) { }
 
-    
+
     public override void Run()
     {
-
+        // Mengatur warna bot
         BodyColor = Color.FromArgb(0xF0, 0xF0, 0xF0);
         TurretColor = Color.FromArgb(0xF0, 0xF0, 0xF0);
         RadarColor = Color.FromArgb(0xF0, 0xF0, 0xF0);
@@ -26,109 +28,113 @@ public class NearWall : Bot
         TracksColor = Color.FromArgb(0xF0, 0xF0, 0xF0);
         GunColor = Color.FromArgb(0xF0, 0xF0, 0xF0);
 
-        TurnGunLeft(90);
-        const double tolerance = 5.0;
-        var bear = 0.0;
-        var radBear = 0.0;
-        clockwise = true;
-        
+        TurnGunLeft(90); // Memutar turret ke kiri 90 derajat
+
+        double bear; // Variabel untuk menyimpan sudut bearing
+        clockwise = true; // Inisialisasi arah rotasi
+
         while (IsRunning)
-        { 
-            if(turnGun)
+        {
+            // Jika flag turnGun aktif, putar turret 180 derajat
+            if (turnGun)
             {
                 turnGun = false;
                 TurnGunLeft(180);
             }
-            if(Y < ArenaHeight/2)
-            {
-                if(X < ArenaWidth/2)
-                {
-                    if(clockwise)
-                    {
-                        bear = BearingTo(ArenaWidth - nearWallDistance, nearWallDistance);
-                        TurnLeft(bear);
-                        Forward(DistanceTo(ArenaWidth - nearWallDistance, nearWallDistance));
-                    }else{
-                        bear = BearingTo(nearWallDistance, ArenaHeight - nearWallDistance);
-                        TurnLeft(bear);
-                        Forward(DistanceTo(nearWallDistance, ArenaHeight - nearWallDistance));
-                    }
-                }
-                else
-                {
-                    if(clockwise)
-                    {
-                        bear = BearingTo(ArenaWidth - nearWallDistance, ArenaHeight - nearWallDistance);
-                        TurnLeft(bear);
-                        Forward(DistanceTo(ArenaWidth - nearWallDistance, ArenaHeight - nearWallDistance));
-                    }else{
-                        bear = BearingTo(nearWallDistance, nearWallDistance);
-                        TurnLeft(bear);
-                        Forward(DistanceTo(nearWallDistance, nearWallDistance));
-                    }
-                }
-            }
-            else
-            {
-                if(X < ArenaWidth/2)
-                {
-                    if(clockwise)
-                    {
-                        bear = BearingTo(nearWallDistance, nearWallDistance);
-                        TurnLeft(bear);
-                        Forward(DistanceTo(nearWallDistance, nearWallDistance));
-                    }else{
-                        bear = BearingTo(ArenaWidth - nearWallDistance, ArenaHeight - nearWallDistance);
-                        TurnLeft(bear);
-                        Forward(DistanceTo(ArenaWidth - nearWallDistance, ArenaHeight - nearWallDistance));
-                    }
-                }
-                else
-                {
-                    if(clockwise)
-                    {
-                        bear = BearingTo(nearWallDistance, ArenaHeight - nearWallDistance);
-                        TurnLeft(bear);
-                        Forward(DistanceTo(nearWallDistance, ArenaHeight - nearWallDistance));
-                    }else{
-                        bear = BearingTo(ArenaWidth - nearWallDistance, nearWallDistance);
-                        TurnLeft(bear);
-                        Forward(DistanceTo(ArenaWidth - nearWallDistance, nearWallDistance));
-                    }
-                }
-            }
-            
-        }
-        
-        
-        
-    }
 
+            // Logika untuk menentukan arah dan pergerakan bot berdasarkan posisi di arena
+            if (Y < ArenaHeight / 2)//bawah
+            {
+                if (X < ArenaWidth / 2)
+                {
+                    //di kiri bawah
+                    if (clockwise)
+                    {
+                        //ke kiri atas
+                        bear = BearingTo(ArenaWidth - nearWallDistance, nearWallDistance);
+                        TurnLeft(bear);
+                        Forward(DistanceTo(ArenaWidth - nearWallDistance, nearWallDistance));
+                    }
+                    else
+                    {
+                        //ke kanan bawah
+                        bear = BearingTo(nearWallDistance, ArenaHeight - nearWallDistance);
+                        TurnLeft(bear);
+                        Forward(DistanceTo(nearWallDistance, ArenaHeight - nearWallDistance));
+                    }
+                }
+                else
+                {
+                    //di kanan bawah
+                    if (clockwise)
+                    {
+                        //ke kanan atas
+                        bear = BearingTo(ArenaWidth - nearWallDistance, ArenaHeight - nearWallDistance);
+                        TurnLeft(bear);
+                        Forward(DistanceTo(ArenaWidth - nearWallDistance, ArenaHeight - nearWallDistance));
+                    }
+                    else
+                    {
+                        //ke kiri bawah
+                        bear = BearingTo(nearWallDistance, nearWallDistance);
+                        TurnLeft(bear);
+                        Forward(DistanceTo(nearWallDistance, nearWallDistance));
+                    }
+                }
+            }
+            else//atas
+            {
+                // di kiri atas
+                if (X < ArenaWidth / 2)
+                {
+                    if (clockwise)
+                    {
+                        //ke kiri bawah
+                        bear = BearingTo(nearWallDistance, nearWallDistance);
+                        TurnLeft(bear);
+                        Forward(DistanceTo(nearWallDistance, nearWallDistance));
+                    }
+                    else
+                    {
+                        //ke kanan atas
+                        bear = BearingTo(ArenaWidth - nearWallDistance, ArenaHeight - nearWallDistance);
+                        TurnLeft(bear);
+                        Forward(DistanceTo(ArenaWidth - nearWallDistance, ArenaHeight - nearWallDistance));
+                    }
+                }
+                else
+                {
+                    //di kanan atas
+                    if (clockwise)
+                    {
+                        //ke kiri atas
+                        bear = BearingTo(nearWallDistance, ArenaHeight - nearWallDistance);
+                        TurnLeft(bear);
+                        Forward(DistanceTo(nearWallDistance, ArenaHeight - nearWallDistance));
+                    }
+                    else
+                    {
+                        //ke kanan bawah
+                        bear = BearingTo(ArenaWidth - nearWallDistance, nearWallDistance);
+                        TurnLeft(bear);
+                        Forward(DistanceTo(ArenaWidth - nearWallDistance, nearWallDistance));
+                    }
+                }
+            }
+        }
+    }
 
     public override void OnScannedBot(ScannedBotEvent e)
     {
-        Fire(5);
+        Fire(5); // Menembak dengan kekuatan 5
     }
-
-
 
     public override void OnHitBot(HitBotEvent e)
     {
-        if(clockwise)
-        {
-            clockwise = false;
-        }else
-        {
-            clockwise = true;
-        }
-        if(!turnGun)
-        {
-            turnGun = true;
-        }else
-        {
-            turnGun = false;
-        }
+        // Mengubah arah rotasi
+        clockwise = !clockwise;
+
+        // Mengubah flag turnGun
+        turnGun = !turnGun;
     }
-
-
 }
